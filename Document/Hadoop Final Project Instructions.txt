@@ -1,0 +1,84 @@
+0. Decision Process - Hadoop/MapReduce
+
+Let's assume you have an active community site, similar to the Udacity forum, 
+where users can post different information. You want to obtain some statistics 
+about user behavior. 
+
+Is it a good idea to use MapReduce/Hadoop to process the data? 
+Consider how each of the 3Vs of Big Data would affect this decision process. 
+
+My answer: 
+
+The 3V's are volume, variety, and velocity. Based on volume, we cannot assume how 
+many people will use the site but anyone could use it. In that case, the data 
+could be large. In terms of variety, people can post different information and 
+the data can be used for different purposes. In terms of velocity, anyone can 
+post anytime. In conclusion, it is a good idea to use MapReduce/Hadoop to process 
+the data. However, if the activity community site was set to private, then using 
+MapReduce/Hadoop may not be necessary. 
+
+1. Students and Posting Time on Forums
+In this exercise your task is to find for each student what is the hour during which the 
+student has posted the most posts. Output from reducers should be:
+
+author_id    hour
+For example:
+
+13431511    13
+54525254141 21
+
+If there is a tie: there are multiple hours during which a student has posted a maximum 
+number of posts, please print the student-hour pairs on separate lines. The order in which 
+these lines appear in your output does not matter.
+
+2. We are interested to see if there is a correlation between the length of a post and the length of answers.
+
+Write a MapReduce program that would process the forum_node data and output the length of the post 
+and the average answer (just answer, not comment) length for each post. You will have to decide how 
+to write both the mapper and the reducer to get the required result.
+
+- the fields to use are: body, node_type, id, parent_id
+
+3. Write a MapReduce program that would output Top 10 tags, ordered by the number of questions they appear in.
+* only use tags in questions
+
+4. We might want to help students form study groups. But first we want to see if there are already 
+students on forums that communicate a lot between themselves. 
+
+As the first step for this analysis we have been tasked with writing a mapreduce program that for each 
+forum thread (that is a question node with all it's answers and comments) would give us a list of students 
+that have posted there - either asked the question, answered a question or added a comment. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
